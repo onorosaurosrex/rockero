@@ -1,0 +1,81 @@
+*{
+	/*for every element we want to reset all pre-stablished
+	values by browser*/
+	padding: 0;
+	margin: 0;
+	border: 1px solid red;
+}
+
+h1,h2{
+	/*for all h1 and h2 headings the line height will be 1
+	this makes no vertical space between heading*/
+	line-height: 1;
+	font-style: normal;
+}
+
+h1{
+	/*we're using specific Adobe font for this project*/
+	font-family: gravesend-sans,sans-serif;
+	font-weight: 700;
+}
+h2{
+	/*we're using specific Adobe font for this project*/
+	font-family: acumin-pro-extra-condensed,sans-serif;
+	font-weight: 300;
+	font-size: 30px;
+}
+.fotoevento {
+	/*this is the first column of the concerts table,
+	it is possible I have to get rid of the table later,
+	for now with this we fix the size of that particular
+	cell and we set the image handling, for exact size
+	they will be featured complete, for those not fitting
+	the system will use the smallest to cover the space
+	with the best part of the image.*/
+	max-width: 274px;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size:cover;
+	/*AUTO will show only a part of the picture
+	the size of the square
+	CONTAIN will reduce the picture to its original
+	symetry that would show background color
+	COVER will use the smallest dimension to cover
+	all the space with symetry on the image, but
+	with lose area to show*/
+}
+.artista1, .artista4{
+	/*each row with the same artists holds the same class.
+	so we can handle what is common.*/
+	display:none;
+	/*lo ocultamos temporalmente*/
+}
+.fotoevento{
+	width:274px;
+	height: 154px;
+
+}
+.artista1 .fotoevento{
+
+	background-image: url("/Users/carlos/Documents/code/PROYECTOSCARLOS/rockero-co/resources/images");
+	background-color: black;
+}
+.artista2 .fotoevento{
+
+	background-image: url("/Users/carlos/Documents/code/PROYECTOSCARLOS/rockero-co/resources/images/tierra.jpg");
+	background-color: blue;
+}
+.artista3 .fotoevento{
+		/*display: none;*/
+
+		background-image: url("/Users/carlos/Documents/code/PROYECTOSCARLOS/rockero-co/resources/images/rhapsody.jpg");
+		background-color: red;
+}
+.artista4 .fotoevento{
+
+	background-image: url("/Users/carlos/Documents/code/PROYECTOSCARLOS/rockero-co/resources/images/tristania.jpg");
+	background-color: green;
+}
+/*img {
+    content:url(http://example.com/image.png);
+}*/
