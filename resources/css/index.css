@@ -8,17 +8,18 @@
 
 #presenter {
 	width: 100%;
-	height:max-content;
+	/*height:auto;*/
+	max-height: 1080px;
 	background-image: url("/Users/carlos/Documents/code/PROYECTOSCARLOS/rockero-co/resources/images/wallpaper.jpg");
 	background-repeat: no-repeat;
-	background-size:contain;
+	background-size:cover;
 }
 #logo {
-	position: relative;
+	max-height:1080px;
+	position: static;
 	text-align: center;
 	font-size: 30px;
-	margin: 30% auto 60% auto;
-
+	margin:20% auto 50% auto;
 }
 
 #mainfoto{
