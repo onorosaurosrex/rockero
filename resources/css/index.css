@@ -56,8 +56,55 @@ body, #mainfoto, #conciertos *,#logo, #podcast * {
 	border-width:1px;
 	text-decoration: none;
 }
+.social{
+	position:fixed;
+	margin-top: 4px;
+	margin-left: 10p;
+	display: inline-block;
+	z-index: 30;
+	border:0;
+}
 
+.social *{
+	border:0;
+}
 
+.facebook,.instagram,.whatsapp,.mailto,.phonecall,.youtube,.telegram {
+	margin-top: 2px;
+    position: relative;
+	display: inline-block;
+    width: 27px;
+    height: 27px;
+	
+}
+img {
+    width: 25px;
+    height: 25px; 
+}
+img:hover{
+    src: url();
+}
+.facebook a img:hover{
+    content:url("/Users/carlos/Documents/code/PROYECTOSCARLOS/rockero-co/resources/images/facebookhover.png");
+}
+.instagram a img:hover{
+    content:url("/Users/carlos/Documents/code/PROYECTOSCARLOS/rockero-co/resources/images/instagramhover.png");
+}
+.whatsapp a img:hover{
+    content:url("/Users/carlos/Documents/code/PROYECTOSCARLOS/rockero-co/resources/images/whatsapphover.png");
+}
+.mailto a img:hover{
+    content:url("/Users/carlos/Documents/code/PROYECTOSCARLOS/rockero-co/resources/images/emailhover.png");
+}
+.phonecall a img:hover{
+    content:url("/Users/carlos/Documents/code/PROYECTOSCARLOS/rockero-co/resources/images/llamadahover.png");
+}
+.youtube a img:hover{
+    content:url("/Users/carlos/Documents/code/PROYECTOSCARLOS/rockero-co/resources/images/youtubehover.png");
+}
+.telegram a img:hover{
+    content:url("/Users/carlos/Documents/code/PROYECTOSCARLOS/rockero-co/resources/images/telegramhover.png");
+}
 #presenter {
 	width: 100%;
 	/*height:auto;*/
@@ -65,6 +112,7 @@ body, #mainfoto, #conciertos *,#logo, #podcast * {
 	background-image: url("/Users/carlos/Documents/code/PROYECTOSCARLOS/rockero-co/resources/images/wallpaper.jpg");
 	background-repeat: no-repeat;
 	background-size:cover;
+
 }
 #logo {
 	max-height:1080px;
