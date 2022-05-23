@@ -2,8 +2,14 @@
 	/*for every element we want to reset all pre-stablished
 	values by browser*/
 	padding: 0;
-	margin: 0;
-	border: 1px solid red;
+	margin: 0 auto;
+	border: 1px solid black;
+	/*border: 1px solid rgba(111,111,111,0.2) transparent transparent;*/
+	box-sizing:content-box;
+}
+
+body, #mainfoto, #conciertos *,#logo, #podcast * {
+	border:0;
 }
 
 #presenter {
@@ -18,12 +24,26 @@
 	max-height:1080px;
 	position: static;
 	text-align: center;
-	font-size: 30px;
+	/*font-size: 30px;*/
 	margin:20% auto 50% auto;
+	border:0;
 }
 
 #mainfoto{
 	width:min-content;
+}
+#conciertos, #podcast {
+	background-color: #d4d3d2;
+
+
+}
+
+#conciertos h1, #podcast h1 {
+	background-color: rgb(44, 44, 44);
+	line-height: 1.5;
+	align-content: center;
+	color: bisque;
+	border-bottom: 2px bisque solid !important;
 }
 
 h1,h2{
@@ -34,6 +54,7 @@ h1,h2{
 	font-style: normal;
 	font-size: 40px;
 	text-align: center;
+	border:0;
 }
 
 h1{
@@ -47,8 +68,12 @@ h2{
 	font-weight: 300;
 	line-height: 1.3;
 }
-
-.fotoevento {
+.fotoartista,.description,.comprar {
+	margin:0;
+	padding:0;
+	display:inline-block;
+}
+.fotoartista {
 	/*this is the first column of the concerts table,
 	it is possible I have to get rid of the table later,
 	for now with this we fix the size of that particular
@@ -57,9 +82,10 @@ h2{
 	the system will use the smallest to cover the space
 	with the best part of the image.*/
 	max-width: 274px;
-	background-repeat: no-repeat;
+	background-repeat: no-repeat !important;
 	background-position: center;
-	background-size:cover;
+	background-size:contain;
+	float:left;
 	/*AUTO will show only a part of the picture
 	the size of the square
 	CONTAIN will reduce the picture to its original
@@ -67,39 +93,113 @@ h2{
 	COVER will use the smallest dimension to cover
 	all the space with symetry on the image, but
 	with lose area to show*/
-}
-.artista1, .artista4{
-	/*each row with the same artists holds the same class.
-	so we can handle what is common.*/
-	display:none;
-	/*lo ocultamos temporalmente*/
-}
-.fotoevento{
 	width:274px;
 	height: 154px;
+	margin:0;
+	overflow:auto;
+}
+.description{
+	margin:15px 0 15px 15px;
+	/*margin-left:15px;
+	margin-top: 15px;*/
+	min-width: 244px;
+	max-width: 450px;
+	width: 35%;
 
 }
-.artista1 .fotoevento{
 
-	background-image: url("/Users/carlos/Documents/code/PROYECTOSCARLOS/rockero-co/resources/images");
-	background-color: black;
+.description h2,h3{
+	font-family: paralucent-condensed, sans-serif;
+	font-weight: 500;
+	font-style: normal;
 }
-.artista2 .fotoevento{
 
+.description p{
+	margin-left:10px;
+	font-family: quasimoda;
+	font-weight: 400;
+	font-style: normal;
+}
+
+.evento1,.evento2,.evento3,.evento4,.evento5,.evento6,.evento7,.evento8,.evento9,.evento10 {
+	position:static;
+	background-color: white;
+	width:auto;
+	min-height:156px;
+	max-width: 700px;
+	margin:20px auto 20px auto;
+	border-color:blue;
+	border:10px solid #e0e0e0;
+	border-radius: 4px;
+	padding-right: 15px;
+	/*padding:3px;*/
+}
+
+.buytickets {
+	background-color: rgb(96, 106, 255);
+	height:40px;
+	margin-top: 25px;
+	/*padding: 20px;*/
+	/*float:left;*/
+	/*margin: auto 0 auto 15px;*/
+	clear:both;
+}
+
+.evento1 .fotoartista{
+	background-image: url("/Users/carlos/Documents/code/PROYECTOSCARLOS/rockero-co/resources/images/jose.jpg");
+}
+
+.evento2 .fotoartista,.evento3 .fotoartista,.evento4 .fotoartista,.evento5 .fotoartista {
 	background-image: url("/Users/carlos/Documents/code/PROYECTOSCARLOS/rockero-co/resources/images/tierra.jpg");
-	background-color: blue;
-}
-.artista3 .fotoevento{
-		/*display: none;*/
-
-		background-image: url("/Users/carlos/Documents/code/PROYECTOSCARLOS/rockero-co/resources/images/rhapsody.jpg");
-		background-color: red;
-}
-.artista4 .fotoevento{
-
+} 
+.evento7 .fotoartista,.evento8 .fotoartista,.evento9 .fotoartista,.evento10 .fotoartista {
+	background-image: url("/Users/carlos/Documents/code/PROYECTOSCARLOS/rockero-co/resources/images/rhapsody.jpg");
+} 
+.evento6 .fotoartista{
 	background-image: url("/Users/carlos/Documents/code/PROYECTOSCARLOS/rockero-co/resources/images/tristania.jpg");
-	background-color: green;
 }
-/*img {
-    content:url(http://example.com/image.png);
-}*/
+
+.buytickets:hover {
+	background-color: red;
+}
+
+.comprar{
+	display:inline-block;
+	width: 154px;
+	height: 154px;
+	float:right;
+	background-image: url("/Users/carlos/Documents/code/PROYECTOSCARLOS/rockero-co/resources/images/ticketsoff.png");
+	
+}
+.comprar:hover{
+
+	background-image: url("/Users/carlos/Documents/code/PROYECTOSCARLOS/rockero-co/resources/images/ticketshover.png");
+	
+}
+#podcast *{
+	border:1px solid red;
+}
+.podcontainer {
+	/*display: grid;*/
+	max-width: 1100px;
+	/*grid-template-columns: 50% 50%;*/
+}
+
+.spreaker-player {
+
+}
+
+.show {
+	margin: 20px 20px;
+	height:auto;
+	display: inline-block;
+}
+
+.show img{
+
+}
+
+.imagen{
+	background-image: url("/Users/carlos/Documents/code/PROYECTOSCARLOS/rockero-co/resources/images/Rockeras.png");
+	height:300px
+}
