@@ -114,7 +114,7 @@ h2{
 	font-style: normal;
 }
 
-.description p{
+.description p, #footer p{
 	margin-left:10px;
 	font-family: quasimoda;
 	font-weight: 400;
@@ -202,4 +202,21 @@ h2{
 .imagen{
 	background-image: url("/Users/carlos/Documents/code/PROYECTOSCARLOS/rockero-co/resources/images/Rockeras.png");
 	height:300px
+}
+
+.evento1, .evento6 {
+	display: none;
+}
+
+#footer{
+	line-height: 2;
+	background-color: rgb(44, 44, 44);
+}
+
+#footer p{
+	line-height: 2;
+	background-color: rgb(44, 44, 44);
+	color: bisque;
+	text-align: center;
+	font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
 }
